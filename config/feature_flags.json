@@ -1,0 +1,17 @@
+{
+    "ENABLE_PLAYWRIGHT": true,
+    "ENABLE_BROWSER_USE": true,
+    "ENABLE_OPENMANUS": true,
+    "ENABLE_RATE_LIMITER": true,
+    "ENABLE_TRUST_SCORE": true,
+    "ENABLE_AUTO_RAMPUP": true,
+    "ENABLE_SMART_SCHEDULING": false,
+    "ENABLE_BOARD_TRACKING": true,
+    "ENABLE_IMAGE_HASH": true,
+    "ENABLE_QUEUE_PUBLISHER": true,
+    "ENABLE_MLFLOW_TIMING": true,
+    "ENABLE_EXPONENTIAL_BACKOFF": true,
+    "ENABLE_FLUX": true,
+    "ENABLE_EDGE_TTS": true,
+    "ENABLE_MPT": true
+}

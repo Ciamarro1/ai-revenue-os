@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pin 12345 - Pinterest Mock</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
+        .pin-container { background: white; padding: 30px; border-radius: 16px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; }
+        .pin-image { width: 50%; padding-right: 20px; }
+        .pin-image img { width: 100%; border-radius: 8px; }
+        .pin-details { width: 50%; display: flex; flex-direction: column; justify-content: space-between; }
+        .metrics-section { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 20px; }
+        .metric { font-size: 14px; margin-bottom: 8px; }
+        .metric-value { font-weight: bold; color: #e60023; }
+        .delete-btn { background: #e60023; color: white; border: none; padding: 8px 16px; border-radius: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="pin-container">
+        <div class="pin-image">
+            <img src="https://i.imgur.com/mock.jpg" alt="Pin Image" />
+        </div>
+        <div class="pin-details">
+            <div>
+                <h2>Título do Pin Publicado</h2>
+                <p>Descrição detalhada do Pin.</p>
+                <p><a href="https://github.com/Ciamarro1/ai-revenue-os">Link de Destino</a></p>
+            </div>
+            
+            <div class="metrics-section">
+                <h3>Estatísticas do Pin</h3>
+                <div class="metric">Visualizações (Impressões): <span class="metric-value" id="val-impressions">120</span></div>
+                <div class="metric">Cliques de Saída: <span class="metric-value" id="val-clicks">15</span></div>
+                <div class="metric">Salvamentos: <span class="metric-value" id="val-saves">8</span></div>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <button class="delete-btn" id="delete-pin-btn" onclick="deletePin()">Deletar Pin</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function deletePin() {
+            if(confirm("Deseja realmente deletar este Pin?")) {
+                document.body.innerHTML = "<h1>Pin deletado com sucesso.</h1>";
+                // Grava um arquivo local se for executado no ambiente de teste para sinalizar sucesso de deleção
+                console.log("PIN_DELETED");
+            }
+        }
+    </script>
+</body>
+</html>

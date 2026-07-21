@@ -1,0 +1,16 @@
+[video.motion_score]
+critical = 0.5
+warning = 1.5
+good = 3.0
+
+[video.sharpness]
+minimum = 50.0
+
+[video.black_frames]
+max_allowed = 2
+
+[video.duration]
+minimum = 5.0
+
+[audio.silence]
+max_allowed = 0.5

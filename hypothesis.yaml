@@ -1,0 +1,18 @@
+# hypothesis.yaml
+product:
+  platform: hotmart
+  name: "Fórmula 20:20"
+  url: "https://hotmart.com/exemplo_2020"
+  price: 97
+  commission: 50
+
+audience:
+  persona: "Começa o dia perdido, passa horas reagindo a notificações e termina o dia cansado sem concluir o importante."
+
+offer:
+  promise: "Recuperar o controle das primeiras horas do dia usando um sistema simples de foco."
+  pain: "Sensação constante de falta de tempo e exaustão mental ao final do expediente."
+  mechanism: "Protocolo Primeira Vitória"
+  mechanism_explanation: "Um ritual de 20 minutos para escolher, iniciar e proteger a tarefa mais importante antes do cérebro entrar em modo reativo."
+  cta: "Clique no link da bio para destravar o Protocolo Primeira Vitória e blindar suas manhãs."
+  target_emotion: ["controle", "alívio", "clareza"]

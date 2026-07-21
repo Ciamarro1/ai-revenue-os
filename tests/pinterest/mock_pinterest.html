@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinterest Pin Builder Mock</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
+        .container { background: white; padding: 30px; border-radius: 16px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .field { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; }
+        input[type="text"], div[contenteditable="true"] { width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+        div[contenteditable="true"] { min-height: 100px; background: white; }
+        button { background: #e60023; color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: bold; cursor: pointer; font-size: 16px; }
+        button:hover { background: #ad081b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Criar Pin (Mock)</h1>
+        
+        <div class="field">
+            <label>Mídia</label>
+            <input type="file" id="media-upload" accept="image/*,video/*" />
+        </div>
+        
+        <div class="field">
+            <label>Título</label>
+            <input type="text" data-testid="pin-builder-title" placeholder="Adicione seu título" />
+        </div>
+        
+        <div class="field">
+            <label>Descrição</label>
+            <div contenteditable="true" data-testid="pin-builder-description" placeholder="Diga a todos sobre o seu Pin"></div>
+        </div>
+        
+        <div class="field">
+            <label>Link de Destino</label>
+            <input type="text" data-testid="pin-builder-link" placeholder="Adicione um link de destino" />
+        </div>
+        
+        <div class="field" style="text-align: right;">
+            <button type="button" data-testid="board-dropdown-save-button" onclick="publishPin()">Salvar</button>
+        </div>
+    </div>
+
+    <script>
+        function publishPin() {
+            console.log("Publishing pin clicked!");
+            window.location.href = "pin/12345/index.html";
+        }
+    </script>
+</body>
+</html>

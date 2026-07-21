@@ -1,0 +1,65 @@
+# Ignorar segredos e configurações locais
+.env
+config.toml
+MoneyPrinterTurbo/config.toml
+MoneyPrinterTurbo/.env
+
+# Ignorar sessões (contêm cookies sensíveis)
+config/sessions/
+
+# Ignorar o diretório MPT Engine cache/outputs
+storage/
+MoneyPrinterTurbo/storage/
+mpt_env/
+MoneyPrinterTurbo/mpt_env/
+
+# Ignorar Dados e Padrões Aprendidos pela IA (Muda toda hora)
+knowledge/
+experiments.jsonl
+
+# Virtual Environment
+venv/
+
+# Bancos de teste e arquivos de saída
+test_tournament_db.sqlite3
+test_tournament.jsonl
+output.jpg
+output_test.jpg
+output/
+
+# Artefatos Python / Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+src/ai_revenue_os.egg-info/
+
+# Editor / SO
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local run telemetry and experiment outputs
+mlruns/
+experiments/
+cache/
+temp_history.db
+temp_val_creative.png
+
+
+# Virtual env
+.venv/
+
+# Windows redistributables
+vc_redist.*.exe
+
+# Temp numbered files
+u0
+u[0-9]
+u[0-9][0-9]
+

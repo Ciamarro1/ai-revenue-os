@@ -1,0 +1,51 @@
+[project]
+name = "ai-revenue-os"
+version = "1.0.0"
+description = "A data-driven orchestrator platform for automated AI video generation."
+authors = [
+    {name = "AI Revenue OS Contributors"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python>=4.8.0",
+    "numpy>=1.26.0",
+    "pydantic>=2.7.0",
+    "scipy>=1.12.0",
+    "requests",
+    "python-dotenv",
+    "PyYAML>=6.0",
+    "rich",
+    "mlflow>=2.11.0",
+    "pydantic-ai",
+    "browser-use>=0.1.28",
+    "langchain-google-genai",
+    "playwright",
+    "edge-tts",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+]
+vector = [
+    "qdrant-client>=1.9.0",
+    "sentence-transformers>=3.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+    ".git",
+    "__pycache__",
+    "mpt_env",
+    "MoneyPrinterTurbo",
+    "storage",
+    "knowledge",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"

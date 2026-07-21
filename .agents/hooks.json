@@ -1,0 +1,30 @@
+{
+  "auto-lint": {
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".\\venv\\Scripts\\ruff check --fix .",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "test-guard": {
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".\\venv\\Scripts\\python -m pytest tests/unit -x -q --tb=short",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}

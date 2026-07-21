@@ -1,0 +1,53 @@
+profile_name: canary
+
+research:
+  provider: stochastic_mutator
+
+factory:
+  provider: moneyprinterturbo
+
+publisher:
+  mode: shadow
+
+metrics:
+  provider: reality
+
+limits:
+  max_posts: 3
+
+backpressure:
+  research:
+    max_queue: 100
+  rendering:
+    max_queue: 20
+  calibration:
+    max_queue: 1000
+  publish:
+    max_queue: 10
+
+retry:
+  research:
+    max_attempts: 5
+    backoff: exponential
+  rendering:
+    max_attempts: 2
+  publish:
+    max_attempts: 3
+  metrics:
+    max_attempts: 10
+
+safety_policy:
+  max_failure_rate_pct: 20
+  max_identical_output: 5
+  max_daily_posts: 20
+  max_cost_per_day: 2
+  max_empty_generations: 3
+  max_provider_errors: 50
+  max_publish_errors: 10
+  auto_stop: true
+
+quality:
+  enabled: true
+
+safety:
+  semantic: true
